@@ -1,6 +1,6 @@
 # ToastBoard
 
-Why use a breadboard when all your IO is right here?
+Why use a breadboard when all your I/O is right here?
 
 ## Features
 
