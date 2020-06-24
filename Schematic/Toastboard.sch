@@ -63,7 +63,7 @@ U 1 1 5EF24D11
 P 7300 3650
 F 0 "RV1" H 7231 3696 50  0000 R CNN
 F 1 "R_POT" H 7231 3605 50  0000 R CNN
-F 2 "Potentiometer_THT:Potentiometer_Vishay_248GJ-249GJ_Single_Vertical" H 7300 3650 50  0001 C CNN
+F 2 "Potentiometer_THT:Potentiometer_Piher_PC-16_Single_Vertical" H 7300 3650 50  0001 C CNN
 F 3 "~" H 7300 3650 50  0001 C CNN
 	1    7300 3650
 	1    0    0    -1  
@@ -638,51 +638,36 @@ F 3 "http://www.fairchildsemi.com/ds/FD/FDS6892A.pdf" H 4550 3550 50  0001 L CNN
 	2    4550 3550
 	1    0    0    -1  
 $EndComp
-Text Label 5550 5500 0    50   ~ 0
+Text Label 4700 5500 2    50   ~ 0
 SDA
 Wire Wire Line
-	5550 5500 5450 5500
-Text Label 5550 5600 0    50   ~ 0
+	4700 5500 4800 5500
+Text Label 4700 5600 2    50   ~ 0
 SCL
 Wire Wire Line
-	5550 5600 5450 5600
+	4700 5600 4800 5600
 $Comp
 L power:+3.3V #PWR0122
 U 1 1 5EF85311
-P 5050 5300
-F 0 "#PWR0122" H 5050 5150 50  0001 C CNN
-F 1 "+3.3V" H 5065 5473 50  0000 C CNN
-F 2 "" H 5050 5300 50  0001 C CNN
-F 3 "" H 5050 5300 50  0001 C CNN
-	1    5050 5300
+P 5200 5100
+F 0 "#PWR0122" H 5200 4950 50  0001 C CNN
+F 1 "+3.3V" H 5000 5100 50  0000 C CNN
+F 2 "" H 5200 5100 50  0001 C CNN
+F 3 "" H 5200 5100 50  0001 C CNN
+	1    5200 5100
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR0123
 U 1 1 5EF85C7A
-P 5050 5900
-F 0 "#PWR0123" H 5050 5650 50  0001 C CNN
-F 1 "GND" H 5055 5727 50  0000 C CNN
-F 2 "" H 5050 5900 50  0001 C CNN
-F 3 "" H 5050 5900 50  0001 C CNN
-	1    5050 5900
+P 5200 6100
+F 0 "#PWR0123" H 5200 5850 50  0001 C CNN
+F 1 "GND" H 5350 6100 50  0000 C CNN
+F 2 "" H 5200 6100 50  0001 C CNN
+F 3 "" H 5200 6100 50  0001 C CNN
+	1    5200 6100
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:+3.3V #PWR0124
-U 1 1 5EF8A5CF
-P 4550 5450
-F 0 "#PWR0124" H 4550 5300 50  0001 C CNN
-F 1 "+3.3V" H 4565 5623 50  0000 C CNN
-F 2 "" H 4550 5450 50  0001 C CNN
-F 3 "" H 4550 5450 50  0001 C CNN
-	1    4550 5450
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4550 5450 4550 5500
-Wire Wire Line
-	4550 5500 4650 5500
 Text Label 4200 5500 0    50   ~ 0
 SDA
 Text Label 4200 5600 0    50   ~ 0
@@ -1052,7 +1037,7 @@ U 1 1 5F1E6BB4
 P 4150 1700
 F 0 "D2" H 4150 1483 50  0000 C CNN
 F 1 "D_Schottky" H 4150 1574 50  0000 C CNN
-F 2 "Diode_SMD:D_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 4150 1700 50  0001 C CNN
+F 2 "Diode_SMD:D_SOD-123" H 4150 1700 50  0001 C CNN
 F 3 "~" H 4150 1700 50  0001 C CNN
 	1    4150 1700
 	-1   0    0    1   
@@ -1203,24 +1188,6 @@ F 3 "~" H 5350 1700 50  0001 C CNN
 	1    5350 1700
 	1    0    0    -1  
 $EndComp
-Connection ~ 4650 5600
-Connection ~ 4650 5500
-Wire Wire Line
-	4650 5600 4650 5500
-Wire Wire Line
-	4650 5700 4650 5600
-$Comp
-L Sensor_Temperature:PCT2075D U2
-U 1 1 5EF8033D
-P 5050 5600
-F 0 "U2" H 5250 5950 50  0000 C CNN
-F 1 "PCT2075D" H 5300 5850 50  0000 C CNN
-F 2 "Package_SO:SO-8_3.9x4.9mm_P1.27mm" H 5050 5600 50  0001 C CNN
-F 3 "https://www.nxp.com/docs/en/data-sheet/PCT2075.pdf" H 5050 5600 50  0001 C CNN
-	1    5050 5600
-	1    0    0    -1  
-$EndComp
-NoConn ~ 5450 5700
 Text Notes 6950 6200 0    50   ~ 0
 Buttons\n
 Text Notes 3150 6200 0    50   ~ 0
@@ -1338,4 +1305,35 @@ Wire Notes Line
 	2950 1200 2950 6250
 Text Notes 1650 6150 0    50   ~ 0
 Connector
+$Comp
+L Sensor_Temperature:LM75B U2
+U 1 1 5EF3F0A5
+P 5200 5600
+F 0 "U2" H 5350 6150 50  0000 C CNN
+F 1 "LM75B" H 5350 6050 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 5200 5600 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm75b.pdf" H 5200 5600 50  0001 C CNN
+	1    5200 5600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5600 5700 5600 5600
+Connection ~ 5600 5600
+Wire Wire Line
+	5600 5600 5600 5500
+$Comp
+L power:+3.3V #PWR01
+U 1 1 5EF9088A
+P 5700 5500
+F 0 "#PWR01" H 5700 5350 50  0001 C CNN
+F 1 "+3.3V" H 5715 5673 50  0000 C CNN
+F 2 "" H 5700 5500 50  0001 C CNN
+F 3 "" H 5700 5500 50  0001 C CNN
+	1    5700 5500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5700 5500 5600 5500
+Connection ~ 5600 5500
+NoConn ~ 4800 5700
 $EndSCHEMATC
